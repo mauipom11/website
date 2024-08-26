@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image</title>
+    <link rel="stylesheet" href="upload.css">
+</head>
+<body>
+    <a href="home.html">
+    <header id="Back_home" href="home.html">
+        <h1>Home</h1>
+    </header>
+    </a>
+    
+    <header>
+        <h1 id="site-title">Image Upload</h1>
+    </header>
+
+    <main>
+        <section id="upload_section">
+            <form id="upload_form" action="/upload" method="post" enctype="multipart/form-data">
+                <label for="file_upload" class="upload_label">Choose an image to upload:</label>
+                <input type="file" id="file_upload" name="file_upload" accept="image/*" required>
+                <button type="submit" class="upload_button">Upload</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
