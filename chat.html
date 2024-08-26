@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANON_CHAT</title>
+    <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+    <header>
+        <h1 id="site-title">ANON_CHAT</h1>
+        <a href="home.html" id="home_button">Home</a>
+    </header>
+
+    <main>
+        <section id="chat_section">
+            <div id="chat_box">
+                <!-- Messages will be displayed here -->
+            </div>
+            <form id="chat_form">
+                <textarea id="message_input" placeholder="Type your message here..." rows="3" required></textarea>
+                <button type="submit" class="send_button">Send</button>
+            </form>
+        </section>
+
+        <div id="slideshow_section">
+            <div id="slideshow_left" class="slideshow">
+                <!-- Images will be dynamically added here -->
+                 <img src="chat_imgs/image copy 3.png" alt="meme">
+                 <img src="chat_imgs/image copy 5.png" alt="meme">
+                 <img src="chat_imgs/image copy.png" alt="meme">
+            </div>
+            <div id="slideshow_right" class="slideshow">
+                <!-- Images will be dynamically added here -->
+                <img src="chat_imgs/image copy 2.png" alt="meme">
+                <img src="chat_imgs/image copy 4.png" alt="meme">
+                <img src="chat_imgs/image.png" alt="meme">
+
+            </div>
+        </div>
+    </main>
+
+    <script src="chat.js"></script>
+    <script src="slideshow.js"></script>
+</body>
+</html>
