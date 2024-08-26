@@ -1,0 +1,220 @@
+
+ /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Large Heading (Loyta) */
+header {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: -80px;
+}
+
+#site-title {
+    font-size: 2.4rem; /* 20% larger */
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Header Container */
+#header_stuff {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    border-radius: 4px;
+    margin-top: 0px;
+}
+
+/* Left Header (Logo and Search) */
+#left_head {
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    margin-top: 7px;
+}
+
+#search {
+    margin-left: 20px;
+    margin-top: 11px;
+    flex-grow: 1; /* Allows search to grow and take up space */
+}
+
+/* Right Header (Upload, Notification, Profile) */
+#right_head {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* Individual Icons on Right Header */
+#right_head img {
+    margin-left: 15px;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    #search {
+        margin-left: 10px; /* Reduce margin for smaller screens */
+        flex-grow: 0;
+    }
+
+    #right_head {
+        margin-left: 0;
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 480px) {
+    #header_stuff {
+        flex-direction: column; /* Stack items vertically on very small screens */
+        align-items: center;
+    }
+
+    #left_head, #right_head {
+        margin: 10px 0;
+        justify-content: center;
+    }
+}
+
+#content {
+    margin-top: 20px;
+    text-align: center;
+    color: #000000;
+}
+
+
+
+* {
+  box-sizing:border-box;
+}
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+body { 
+
+  font-family:'Lato';
+}
+.heading-primary {
+  font-size:2em;
+  padding:2em;
+  text-align:center;
+}
+.accordion dl,
+.accordion-list {
+   border:1px solid #ddd;
+   &:after {
+       content: "";
+       display:block;
+       height:1em;
+       width:100%;
+       background-color:darken(#007bff, 10%);
+     }
+}
+.accordion dd,
+.accordion__panel {
+   background-color:#eee;
+   font-size:1em;
+   line-height:1.5em; 
+}
+.accordion p {
+  padding:1em 2em 1em 2em;
+}
+
+.accordion {
+    position:relative;
+    background-color:#eee;
+}
+.container {
+  max-width:960px;
+  margin:0 auto;
+  padding:2em 0 2em 0;
+}
+.accordionTitle,
+.accordion__Heading {
+ background-color:#007bff; 
+   text-align:center;
+     font-weight:700; 
+          padding:2em;
+          display:block;
+          text-decoration:none;
+          color:#fff;
+          transition:background-color 0.5s ease-in-out;
+  border-bottom:1px solid darken(#38cc70, 5%);
+  &:before {
+   content: "+";
+   font-size:1.5em;
+   line-height:0.5em;
+   float:left; 
+   transition: transform 0.3s ease-in-out;
+  }
+  &:hover {
+    background-color:darken(#38cc70, 10%);
+  }
+}
+.accordionTitleActive, 
+.accordionTitle.is-expanded {
+   background-color:darken(#38cc70, 10%);
+    &:before {
+     
+      transform:rotate(-225deg);
+    }
+}
+.accordionItem {
+    height:auto;
+    overflow:hidden; 
+    
+     max-height:50em;
+    transition:max-height 1s;   
+ 
+    
+    @media screen and (min-width:48em) {
+         max-height:15em;
+        transition:max-height 0.5s
+        
+    }
+    
+   
+}
+ 
+.accordionItem.is-collapsed {
+    max-height:0;
+}
+.no-js .accordionItem.is-collapsed {
+  max-height: auto;
+}
+.animateIn {
+     animation: accordionIn 0.45s normal ease-in-out both 1; 
+}
+.animateOut {
+     animation: accordionOut 0.45s alternate ease-in-out both 1;
+}
+@keyframes accordionIn {
+  0% {
+    opacity: 0;
+    transform:scale(0.9) rotateX(-60deg);
+    transform-origin: 50% 0;
+  }
+  100% {
+    opacity:1;
+    transform:scale(1);
+  }
+}
+
+@keyframes accordionOut {
+    0% {
+       opacity: 1;
+       transform:scale(1);
+     }
+     100% {
+          opacity:0;
+           transform:scale(0.9) rotateX(-60deg);
+       }
+}
